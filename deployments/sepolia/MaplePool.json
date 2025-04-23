@@ -1,0 +1,118 @@
+{
+  "address": "0x5F9b60A530dcc81b48Cd1d6B675EF9A766BBA326",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "TOKEN",
+      "outputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "balances",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "sponsor",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "depositToken",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xdb3d31579b42a4de9d655a70b005c38a78b910ce231a75240cabf9c8eebd08c4",
+  "receipt": {
+    "to": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+    "from": "0xB65540bBA534E88EB4a5062D0E6519C07063b259",
+    "contractAddress": null,
+    "transactionIndex": 87,
+    "gasUsed": "209704",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x32a405083dc433545f649155ccdf04bbb455a97110e84d0c76a2fe5dba4efa54",
+    "transactionHash": "0xdb3d31579b42a4de9d655a70b005c38a78b910ce231a75240cabf9c8eebd08c4",
+    "logs": [],
+    "blockNumber": 8171648,
+    "cumulativeGasUsed": "15154452",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "86bb56801ea36a8de8570d1aabf9c73a",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.25+commit.b61c2a91\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"TOKEN\",\"outputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"balances\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sponsor\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"depositToken\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/MaplePool.sol\":\"MaplePool\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":999999},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v4.9.0) (token/ERC20/IERC20.sol)\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Interface of the ERC20 standard as defined in the EIP.\\n */\\ninterface IERC20 {\\n    /**\\n     * @dev Emitted when `value` tokens are moved from one account (`from`) to\\n     * another (`to`).\\n     *\\n     * Note that `value` may be zero.\\n     */\\n    event Transfer(address indexed from, address indexed to, uint256 value);\\n\\n    /**\\n     * @dev Emitted when the allowance of a `spender` for an `owner` is set by\\n     * a call to {approve}. `value` is the new allowance.\\n     */\\n    event Approval(address indexed owner, address indexed spender, uint256 value);\\n\\n    /**\\n     * @dev Returns the amount of tokens in existence.\\n     */\\n    function totalSupply() external view returns (uint256);\\n\\n    /**\\n     * @dev Returns the amount of tokens owned by `account`.\\n     */\\n    function balanceOf(address account) external view returns (uint256);\\n\\n    /**\\n     * @dev Moves `amount` tokens from the caller's account to `to`.\\n     *\\n     * Returns a boolean value indicating whether the operation succeeded.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function transfer(address to, uint256 amount) external returns (bool);\\n\\n    /**\\n     * @dev Returns the remaining number of tokens that `spender` will be\\n     * allowed to spend on behalf of `owner` through {transferFrom}. This is\\n     * zero by default.\\n     *\\n     * This value changes when {approve} or {transferFrom} are called.\\n     */\\n    function allowance(address owner, address spender) external view returns (uint256);\\n\\n    /**\\n     * @dev Sets `amount` as the allowance of `spender` over the caller's tokens.\\n     *\\n     * Returns a boolean value indicating whether the operation succeeded.\\n     *\\n     * IMPORTANT: Beware that changing an allowance with this method brings the risk\\n     * that someone may use both the old and the new allowance by unfortunate\\n     * transaction ordering. One possible solution to mitigate this race\\n     * condition is to first reduce the spender's allowance to 0 and set the\\n     * desired value afterwards:\\n     * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729\\n     *\\n     * Emits an {Approval} event.\\n     */\\n    function approve(address spender, uint256 amount) external returns (bool);\\n\\n    /**\\n     * @dev Moves `amount` tokens from `from` to `to` using the\\n     * allowance mechanism. `amount` is then deducted from the caller's\\n     * allowance.\\n     *\\n     * Returns a boolean value indicating whether the operation succeeded.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function transferFrom(address from, address to, uint256 amount) external returns (bool);\\n}\\n\",\"keccak256\":\"0x287b55befed2961a7eabd7d7b1b2839cbca8a5b80ef8dcbb25ed3d4c2002c305\",\"license\":\"MIT\"},\"contracts/MaplePool.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.8.25;\\n\\nimport {IERC20} from \\\"@openzeppelin/contracts/token/ERC20/IERC20.sol\\\";\\n\\ncontract MaplePool {\\n    \\n   IERC20 public constant TOKEN = IERC20(0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238);\\n   mapping(address => uint) public balances;\\n     function depositToken(\\n        address sponsor,\\n        uint256 amount\\n    ) external {\\n        TOKEN.transferFrom(msg.sender,address(this),amount);\\n        balances[sponsor] =  balances[sponsor] + amount;\\n    }\\n}\\n\",\"keccak256\":\"0x7f829c4223c7f5dde8a30ab762d5a36157004fec82fd7565bbae71e148c1bfad\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b506102d58061001f6000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806327e235e314610046578063338b5dea1461007957806382bfefc81461008e575b600080fd5b6100666100543660046101f1565b60006020819052908152604090205481565b6040519081526020015b60405180910390f35b61008c610087366004610213565b6100ce565b005b6100a9731c7d4b196cb0c7b01d743fbc6116a902379c723881565b60405173ffffffffffffffffffffffffffffffffffffffff9091168152602001610070565b6040517f23b872dd00000000000000000000000000000000000000000000000000000000815233600482015230602482015260448101829052731c7d4b196cb0c7b01d743fbc6116a902379c7238906323b872dd906064016020604051808303816000875af1158015610145573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610169919061023d565b5073ffffffffffffffffffffffffffffffffffffffff821660009081526020819052604090205461019b90829061025f565b73ffffffffffffffffffffffffffffffffffffffff90921660009081526020819052604090209190915550565b803573ffffffffffffffffffffffffffffffffffffffff811681146101ec57600080fd5b919050565b60006020828403121561020357600080fd5b61020c826101c8565b9392505050565b6000806040838503121561022657600080fd5b61022f836101c8565b946020939093013593505050565b60006020828403121561024f57600080fd5b8151801515811461020c57600080fd5b80820180821115610299577f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b9291505056fea2646970667358221220c3d0e56ba0f465edade558804a1c8e94b9c27d4c5ac883a40eebb1b4bf29fb6f64736f6c63430008190033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806327e235e314610046578063338b5dea1461007957806382bfefc81461008e575b600080fd5b6100666100543660046101f1565b60006020819052908152604090205481565b6040519081526020015b60405180910390f35b61008c610087366004610213565b6100ce565b005b6100a9731c7d4b196cb0c7b01d743fbc6116a902379c723881565b60405173ffffffffffffffffffffffffffffffffffffffff9091168152602001610070565b6040517f23b872dd00000000000000000000000000000000000000000000000000000000815233600482015230602482015260448101829052731c7d4b196cb0c7b01d743fbc6116a902379c7238906323b872dd906064016020604051808303816000875af1158015610145573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610169919061023d565b5073ffffffffffffffffffffffffffffffffffffffff821660009081526020819052604090205461019b90829061025f565b73ffffffffffffffffffffffffffffffffffffffff90921660009081526020819052604090209190915550565b803573ffffffffffffffffffffffffffffffffffffffff811681146101ec57600080fd5b919050565b60006020828403121561020357600080fd5b61020c826101c8565b9392505050565b6000806040838503121561022657600080fd5b61022f836101c8565b946020939093013593505050565b60006020828403121561024f57600080fd5b8151801515811461020c57600080fd5b80820180821115610299577f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b9291505056fea2646970667358221220c3d0e56ba0f465edade558804a1c8e94b9c27d4c5ac883a40eebb1b4bf29fb6f64736f6c63430008190033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 1669,
+        "contract": "contracts/MaplePool.sol:MaplePool",
+        "label": "balances",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_mapping(t_address,t_uint256)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_mapping(t_address,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
