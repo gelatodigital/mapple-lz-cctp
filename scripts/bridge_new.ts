@@ -46,7 +46,7 @@ const bridge = async (): Promise<void> => {
   ) as unknown as MapleCCTPSender;
 
   // Set amount to transfer (8 USDC with 6 decimals)
-  const amount = parseUnits("8", 6);
+  const amount = parseUnits("50", 6);
 
   // Generate authorization for the transfer
   const authorization = await initiateBridge(
