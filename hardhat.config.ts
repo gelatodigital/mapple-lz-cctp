@@ -39,13 +39,13 @@ const config: HardhatUserConfig = {
       default: 0,
     },
   },
-  defaultNetwork:"sepolia",
+  defaultNetwork:"hardhat",
   networks: {
     hardhat: {
       forking: {
-        url: `https://base-sepolia.g.alchemy.com/v2/${ALCHEMY_KEY}`,
+        url: `https://eth-sepolia.g.alchemy.com/v2/${ALCHEMY_KEY}`,
 
-       blockNumber: 	24774417,
+      // blockNumber: 	24774417,
       },
     },
     baseSepolia: {
